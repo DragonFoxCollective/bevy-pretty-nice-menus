@@ -1,10 +1,10 @@
-# Bevy Pretty Nice Menus
+# bevy_pretty_nice_menus
 
-[![crates.io](https://img.shields.io/crates/v/bevy-pretty-nice-menus)](https://crates.io/crates/bevy-pretty-nice-menus)
+[![crates.io](https://img.shields.io/crates/v/bevy_pretty_nice_menus)](https://crates.io/crates/bevy_pretty_nice_menus)
 
-| bevy  | bevy-pretty-nice-menus |
+| bevy  | bevy_pretty_nice_menus |
 |-------|------------------------|
-| 0.17  | 0.1                    |
+| 0.17  | 0.1, 0.2               |
 
 A menu stack abstraction for Bevy.
 
@@ -41,7 +41,7 @@ Only available with the `visibility` feature.
 
 These are two entity observers, where the entity target is either pushed or removed when the input is triggered.
 
-## bevy-pretty-nice-input
+## [bevy_pretty_nice_input](https://crates.io/crates/bevy_pretty_nice_input)
 
 This crate also has compatibility with BPNI if the `pretty_nice_input` feature is enabled.
 
