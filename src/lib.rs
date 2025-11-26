@@ -32,19 +32,24 @@ impl Plugin for PrettyNiceMenusPlugin {
     }
 }
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 pub struct MenuWithMouse;
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 pub struct MenuWithoutMouse;
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 pub struct MenuHidesWhenClosed;
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 pub struct MenuDespawnsWhenClosed;
 
 #[derive(Resource, Default, Debug, Reflect)]
+#[reflect(Resource, Default, Debug)]
 pub struct MenuStack {
     stack: Vec<Entity>,
     current_top: Option<Entity>,
@@ -74,13 +79,15 @@ impl MenuStack {
     }
 }
 
-#[derive(EntityEvent)]
+#[derive(EntityEvent, Debug, Reflect)]
+#[reflect(Debug)]
 pub struct ActivateMenu {
     #[event_target]
     pub menu: Entity,
 }
 
-#[derive(EntityEvent)]
+#[derive(EntityEvent, Debug, Reflect)]
+#[reflect(Debug)]
 pub struct DeactivateMenu {
     #[event_target]
     pub menu: Entity,

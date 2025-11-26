@@ -20,18 +20,22 @@ impl Plugin for PrettyNiceMenusInputPlugin {
 }
 
 #[derive(Resource, Default, Debug, Reflect)]
+#[reflect(Resource, Default, Debug)]
 pub struct MenuStackInput {
     current_input: Option<Entity>,
 }
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 pub struct MenuWithInput;
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 #[relationship_target(relationship = MenuInputOf)]
 pub struct MenuInputs(#[relationship] Vec<Entity>);
 
-#[derive(Component)]
+#[derive(Component, Debug, Reflect)]
+#[reflect(Component, Debug)]
 #[relationship(relationship_target = MenuInputs)]
 pub struct MenuInputOf(#[relationship] pub Entity);
 
