@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2
+
+### Fixed
+
+- Top input not being enabled
+
 ## 0.2.1
 
 ### Added

@@ -93,10 +93,10 @@ fn activate_stack_current_input(
     if menu_stack_input.current_input.is_none()
         && let Some(new_top_input) = new_top_input
     {
-        commands.entity(new_top_input).insert(InputDisabled);
+        commands.entity(new_top_input).remove::<InputDisabled>();
 
         for input in menu_inputs.iter_descendants(new_top_input) {
-            commands.entity(input).insert(InputDisabled);
+            commands.entity(input).remove::<InputDisabled>();
         }
 
         menu_stack_input.current_input = Some(new_top_input);
